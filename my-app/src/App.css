@@ -22,3 +22,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.appcontainer {
+  width : 80%;
+  margin: auto;
+  margin-top: 50px;
+  /*background-color: red;*/
+}

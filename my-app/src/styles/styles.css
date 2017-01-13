@@ -1,9 +1,4 @@
-.tickbox {
-
-}
-
-
-.toggle {
-  font-size: 28px;
-  color : gery;
+.conatiner {
+  width : 80%;
+  margin: auto;
 }

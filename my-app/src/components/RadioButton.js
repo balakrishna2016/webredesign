@@ -10,13 +10,21 @@ class RadioButton extends Component{
             <div>
                 {
                     !this.props.Radio ?
-                    <i className="fa fa-circle-o" aria-hidden="true" style={{fontSize : 25, color : 'black'}}
+                    <i className="fa fa-circle-o" aria-hidden="true" 
+                    style={{
+                        fontSize : this.props.size, 
+                        color : this.props.color
+                    }}
                     onClick={()=>{
                       this.props.RadioON()
                     }}
                     ></i>
                     :
-                    <i className="fa fa-circle" aria-hidden="true" style={{fontSize : 25, color : 'black'}}
+                    <i className="fa fa-circle" aria-hidden="true" 
+                    style={{
+                        fontSize : this.props.size, 
+                        color : this.props.color
+                    }}
                     onClick={()=>{
                       this.props.RadioOFF()
                     }}

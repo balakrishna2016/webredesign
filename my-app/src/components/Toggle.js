@@ -13,13 +13,19 @@ class Toggle extends Component{
             !this.props.Toggle ?
             <i className="fa fa-toggle-on"
             aria-hidden="true"
-            style={{fontSize : 28, color : 'grey'}}
+            style={{
+              fontSize : this.props.size, 
+              color : this.props.color
+            }}
             onClick={()=>{
               this.props.ToggleON()
             }}
             ></i>
             :
-            <i className="fa fa-toggle-off" aria-hidden="true" style={{fontSize : 28, color : 'grey'}}
+            <i className="fa fa-toggle-off" aria-hidden="true" style={{
+              fontSize : this.props.size, 
+              color : this.props.color
+            }}
             onClick={()=>{
               this.props.ToggleOFF()
             }}
