@@ -3,15 +3,33 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import TickBox from '../src/components/wo_redux/TickBox'
-import Toggle from '../src/components/wo_redux/Toggle'
-import RadioButton from '../src/components/wo_redux/RadioButton'
+// import TickBox from '../src/components/wo_redux/TickBox'
+// import Toggle from '../src/components/wo_redux/Toggle'
+// import RadioButton from '../src/components/wo_redux/RadioButton'
 import styles from './styles/styles.css'
 
 
+import TestModule from './testfolder'
+import Button from '../src/components/Button'
 
 class App extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.props = {
+      checked: true
+    }
+    this.onClickButton = this.onClickButton.bind(this);
+    this.onCheckboxClick = this.onCheckboxClick.bind(this);
+  }
+
+
+onClickButton() {
+    alert('button is clicked!');
+  }
+  onCheckboxClick() {
+    this.setState({ checked: !this.props.checked });
+    alert('Checkbox is clicked!');
+  }
 
 
   render() {
@@ -19,12 +37,8 @@ class App extends Component {
 
       
         <div>
-            <div className="appcontainer">
-              <TickBox size={25} color={'rgba(12, 183, 222,1)'}/>
-              <RadioButton size={25} color={'rgba(12, 183, 222,1)'}/>
-              <Toggle size={25} color={'rgba(12, 183, 222,1)'}/>
-
-          </div>
+            <Button label="Button" onClickButton={this.onClickButton} />
+            
         </div>
     
 
