@@ -9,8 +9,9 @@ import './App.css';
 import styles from './styles/styles.css'
 
 
-import TestModule from './testfolder'
+// import TestModule from './testfolder'
 import Button from '../src/components/Button'
+import AlertButton from '../src/components/AlertButton'
 
 class App extends Component {
   constructor(props) {
@@ -32,13 +33,18 @@ onClickButton() {
   }
 
 
+  onClickAlertButton(){
+    alert("Clicked  function")
+  }
+
+
   render() {
     return (
 
       
         <div>
             <Button label="Button" onClickButton={this.onClickButton} />
-            
+            <AlertButton onClickButton={this.onClickButton}/>
         </div>
     
 
