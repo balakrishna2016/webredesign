@@ -3,15 +3,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-// import TickBox from '../src/components/wo_redux/TickBox'
-// import Toggle from '../src/components/wo_redux/Toggle'
-// import RadioButton from '../src/components/wo_redux/RadioButton'
 import styles from './styles/styles.css'
 
 
-// import TestModule from './testfolder'
+
 import Button from '../src/components/Button'
 import AlertButton from '../src/components/AlertButton'
+import ClassButton from '../src/components/ClassButton'
+
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +44,10 @@ onClickButton() {
         <div>
             <Button label="Button" onClickButton={this.onClickButton} />
             <AlertButton onClickButton={this.onClickButton}/>
+            <br />
+            <br />
+            
+            <ClassButton name="ABCD"/>
         </div>
     
 

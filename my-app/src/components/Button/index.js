@@ -3,7 +3,7 @@ import '../../styles/styles.css';
 
 const Button = ({ label, onClickButton }) => {
     return (
-        <div>
+        <div className="my-button">
             <button
                 onClick={onClickButton}
                 className="buttonStyle">
