@@ -26,5 +26,5 @@ it('renders Button with all props', () => {
                 </div>
             )).toBe(true)
   
-//   console.log(wrapper.props())
+
 });

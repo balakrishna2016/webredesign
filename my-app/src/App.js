@@ -8,8 +8,7 @@ import styles from './styles/styles.css'
 
 
 import Button from '../src/components/Button'
-// import AlertButton from '../src/components/AlertButton'
-// import ClassButton from '../src/components/ClassButton'
+import NewButton from '../src/components/NewButton'
 
 
 class App extends Component {
@@ -45,7 +44,13 @@ class App extends Component {
             margin = '50'
             onClickButton={this.onClickButton} />
 
-            
+            <NewButton 
+            name="NewButton" 
+            color = "green"
+            margin = '50'
+            />
+
+
         </div>
     
 
