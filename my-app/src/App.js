@@ -8,46 +8,44 @@ import styles from './styles/styles.css'
 
 
 import Button from '../src/components/Button'
-import AlertButton from '../src/components/AlertButton'
-import ClassButton from '../src/components/ClassButton'
+// import AlertButton from '../src/components/AlertButton'
+// import ClassButton from '../src/components/ClassButton'
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.props = {
-      checked: true
-    }
-    this.onClickButton = this.onClickButton.bind(this);
-    this.onCheckboxClick = this.onCheckboxClick.bind(this);
+  
+  onClickButton(){
+    alert("Hello, Button Clicked !!! ")
   }
 
-
-onClickButton() {
-    alert('button is clicked!');
-  }
-  onCheckboxClick() {
-    this.setState({ checked: !this.props.checked });
-    alert('Checkbox is clicked!');
-  }
-
-
-  onClickAlertButton(){
-    alert("Clicked  function")
+  login(){
+    alert("Login !!!")
   }
 
 
   render() {
     return (
-
       
         <div>
-            <Button label="Button" onClickButton={this.onClickButton} />
-            <AlertButton onClickButton={this.onClickButton}/>
-            <br />
-            <br />
+            <Button 
+            name="Button" 
+            color = "green"
+            margin = '50'
+            onClickButton={this.onClickButton} />
+
+            <Button 
+            name="Button" 
+            color = "red"
+            margin = '50'
+            onClickButton={this.onClickButton} />
+
+            <Button 
+            name="Button" 
+            color = "green"
+            margin = '50'
+            onClickButton={this.onClickButton} />
+
             
-            <ClassButton name="ABCD"/>
         </div>
     
 

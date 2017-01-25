@@ -1,21 +1,19 @@
-import React, { PropTypes } from 'react';
-import '../../styles/styles.css';
+import React, { Component } from 'react';
 
-const Button = ({ label, onClickButton }) => {
-    return (
-        <div className="my-button">
-            <button
-                onClick={onClickButton}
-                className="buttonStyle">
-                {label}
-            </button>
-        </div>
-    );
-};
+class Button extends Component{
+    render(){
+        return(
+            <div className="my-button">
+                <button
+                style={{backgroundColor : this.props.color, margin : this.props.margin}}
+                onClick={this.props.onClickButton}
+                >
+                {this.props.name}
+                </button>
+            </div>
+        );
+    }
+}
 
-Button.propTypes = {
-    label: PropTypes.string.isRequired,
-    onClickButton: PropTypes.func,
-};
 
-export default Button;
+export default Button
