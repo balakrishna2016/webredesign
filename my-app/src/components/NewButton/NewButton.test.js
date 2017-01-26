@@ -17,6 +17,12 @@ it('Simulated Click Successfully', () => {
     wrapper.find('button').simulate('click') // simulating click
     // console.log(wrapper.find('.count').text())
     expect(wrapper.find('.count').text()).toEqual('Count : 1') // checking count to be 1 after click
-    
+    var i;
+    for(i=0 ; i < 5 ; i++){
+        wrapper.find('button').simulate('click') // simulating click 5 times
+    }
+
+    expect(wrapper.find('.count').text()).toEqual('Count : 6') // checking count to be 1 after click
+
     // wrapper.find('button').simulate('click')
 })

@@ -9,10 +9,12 @@ import styles from './styles/styles.css'
 
 import Button from '../src/components/Button'
 import NewButton from '../src/components/NewButton'
+import TestComponent from './TestComponent'
+
 
 
 class App extends Component {
-  
+
   onClickButton(){
     alert("Hello, Button Clicked !!! ")
   }
@@ -24,35 +26,37 @@ class App extends Component {
 
   render() {
     return (
-      
+
         <div>
-            <Button 
-            name="Button" 
+            <Button
+            name="Button"
             color = "green"
             margin = '50'
             onClickButton={this.onClickButton} />
 
-            <Button 
-            name="Button" 
+            <Button
+            name="Button"
             color = "red"
             margin = '50'
             onClickButton={this.onClickButton} />
 
-            <Button 
-            name="Button" 
+            <Button
+            name="Button"
             color = "green"
             margin = '50'
             onClickButton={this.onClickButton} />
 
-            <NewButton 
-            name="NewButton" 
+            <NewButton
+            name="NewButton"
             color = "green"
             margin = '50'
             />
 
 
+
+            <TestComponent paraname="One"/>
         </div>
-    
+
 
     );
   }
