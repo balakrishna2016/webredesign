@@ -5,7 +5,32 @@ import NewButton from './index.js'
 import expect from 'expect'
 import { shallow } from 'enzyme'
 
-it('Simulated Click Successfully', () => {
+
+
+it('Tested SetState and GetState Succeessfully with onClikc',()=>{
+     const wrapper = shallow(
+            <NewButton name="NewButton" 
+            color = "green"
+            margin = '50'/>
+            )
+
+     var targetState = 15;
+     wrapper.setState({count : targetState})
+    //  console.log(wrapper.state().count)
+    expect(wrapper.state().count).toBe(targetState)
+
+    //simualte click
+    wrapper.find('button').simulate('click')
+    //expecting state to be targetsate  + 1
+    // console.log(wrapper.state().count)
+    expect(wrapper.state().count).toBe(targetState+1)
+    
+
+})
+
+
+
+it('Simulated Click and updated component successfully', () => {
     const wrapper = shallow(
             <NewButton name="NewButton" 
             color = "green"
@@ -17,12 +42,7 @@ it('Simulated Click Successfully', () => {
     wrapper.find('button').simulate('click') // simulating click
     // console.log(wrapper.find('.count').text())
     expect(wrapper.find('.count').text()).toEqual('Count : 1') // checking count to be 1 after click
-    var i;
-    for(i=0 ; i < 5 ; i++){
-        wrapper.find('button').simulate('click') // simulating click 5 times
-    }
-
-    expect(wrapper.find('.count').text()).toEqual('Count : 6') // checking count to be 1 after click
+    
 
     // wrapper.find('button').simulate('click')
 })

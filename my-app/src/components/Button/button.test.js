@@ -3,7 +3,22 @@ import ReactDOM from 'react-dom';
 
 import Button from './index.js'
 import expect from 'expect'
+import sinon from 'sinon'
 import { shallow } from 'enzyme'
+
+
+it('Simulates button click', ()=>{
+    const onButtonClick = sinon.spy();
+    const wrapper = shallow(<Button 
+        name="test" 
+        onClickButton={onButtonClick} 
+        color = 'red' 
+        margin = '50px' 
+        />);
+
+        wrapper.find('button').simulate('click')
+        expect(onButtonClick.calledOnce).toEqual(1)
+})
 
 
 it('renders Button with all props', () => {

@@ -29,6 +29,7 @@ class NewButton extends Component{
                 </button>
 
                 <div className="count">Count : {this.state.count}</div>
+                <div className="state_target">{this.state.count}</div>
             </div>
         );
     }
